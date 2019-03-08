@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Grid Rows</title>
+    <title>Grid Span</title>
     <style>
       .grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr 2fr 3fr;
-        grid-auto-rows: 3fr;
+        grid-template-columns: repeat(4, 1fr);
       }
 
       .item {
@@ -20,6 +18,21 @@
         font-size: 1.3rem;
         font-weight: bold;
         text-align: center;
+      }
+
+      .item:first-child {
+        /* grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 3; */
+
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 2;
+      }
+
+      .item:nth-child(9) {
+        grid-column: 2 / span 3;
+        grid-row: 4 / span 2;
       }
     </style>
   </head>
@@ -31,10 +44,15 @@
       <div class="item">Item 4</div>
       <div class="item">Item 5</div>
       <div class="item">Item 6</div>
-      <div class="item">Item 6</div>
-      <div class="item">Item 6</div>
-      <div class="item">Item 6</div>
-      <div class="item">Item 6</div>
+      <div class="item">Item 7</div>
+      <div class="item">Item 8</div>
+      <div class="item">Item 9</div>
+      <div class="item">Item 10</div>
+      <div class="item">Item 11</div>
+      <div class="item">Item 12</div>
+      <div class="item">Item 13</div>
+      <div class="item">Item 14</div>
+      <div class="item">Item 15</div>
     </div>
   </body>
 </html>
